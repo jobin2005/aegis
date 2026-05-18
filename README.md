@@ -2,13 +2,13 @@
 
 Aegis is a modern, dual-engine Intrusion Detection System (IDS) that combines **high-speed signature matching** (mimicking Snort) with deep-inspection **AI Anomaly Detection** (Isolation Forest) to detect zero-day exploits. It features a stunning, real-time glassmorphism dashboard built with FastAPI.
 
-## ✨ Features
+##  Features
 - **Dual Threat Engine**: Regex fast-path for known vulnerabilities (SQLi, Log4j, Nmap).
 - **Machine Learning**: Scikit-Learn Isolation Forest trained on *live* biological network data to detect behavioral deviations.
 - **Stand-alone or Cloud**: Seamlessly logs to local SQLite or remote hosting (Supabase).
 - **Live Response Dashboard**: Beautiful FastAPI-powered minimalist UI with immediate threat visualization.
 
-## 🚀 Setup & Installation
+##  Setup & Installation
 
 **1. Clone and Install Dependencies**
 ```bash
@@ -25,14 +25,14 @@ Create a `.env` file and set the interface to monitor (e.g., `lo`, `eth0`, or `w
 SNIFF_INTERFACE=lo
 ```
 
-## 🧠 Training the AI Model
+##  Training the AI Model
 Since Aegis relies on detecting anomalies to catch unknown threats, you must train the AI on your unique network traffic before starting the IDS.
 ```bash
 sudo $(which python3) scripts/train_live_model.py
 ```
 *(Browse the web normally for 45-60 seconds while Aegis builds a secure baseline of your "normal" behavior).*
 
-## 🛑 Starting the Sentinel 
+##  Starting the Sentinel 
 First, spin up your Threat Engine:
 ```bash
 sudo $(which python3) main.py
